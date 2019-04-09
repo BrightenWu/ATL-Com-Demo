@@ -1,0 +1,33 @@
+HKCR
+{
+	DLP.Math.1 = s 'Math class'
+	{
+		CLSID = s '{9c892408-5e2f-469f-8ed6-742c26aae828}'
+	}
+	DLP.Math = s 'Math class'
+	{		
+		CLSID = s '{9c892408-5e2f-469f-8ed6-742c26aae828}'
+		CurVer = s 'DLP.Math.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {9c892408-5e2f-469f-8ed6-742c26aae828} = s 'Math class'
+		{
+			ProgID = s 'DLP.Math.1'
+			VersionIndependentProgID = s 'DLP.Math'
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			ForceRemove Control
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 106'
+			MiscStatus = s '0'
+			{
+			    '1' = s '%OLEMISC%'
+			}
+			TypeLib = s '{0c78c5b3-e4a2-45af-b917-4dcaaf76267a}'
+			Version = s '1.0'
+		}
+	}
+}
